@@ -17,8 +17,8 @@ const notoSerifBengali = Noto_Serif_Bengali({
 });
 
 export const metadata: Metadata = {
-  title: "Saffron Goat Milk Soap | বাংলাদেশের সবচেয়ে জনপ্রিয় সাবান",
-  description: "Saffron Goat Milk Soap – মাত্র ৭ দিনে ত্বক হবে স্পটলেস, দুধের মতো ফর্সা। অর্ডার করুন এখনই।",
+  title: "বিটরুট পাউডার | ল্যাব টেস্টেড, সরকার অনুমোদিত",
+  description: "স্প্রে ড্রাইড বিটরুট পাউডার – ২০০ গ্রাম, ল্যাব টেস্ট ও সরকার অনুমোদিত। হৃদযন্ত্র, লিভার ও ত্বকের জন্য উপকারী। অর্ডার করুন।",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="bn" className={`${notoSansBengali.variable} ${notoSerifBengali.variable}`}>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>

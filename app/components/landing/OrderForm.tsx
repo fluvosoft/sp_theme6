@@ -40,44 +40,39 @@ export default function OrderForm() {
   }
 
   return (
-    <section
-      id={ORDER_FORM_ID}
-      className="px-4 py-8 md:px-8 md:py-12"
-      style={{ backgroundColor: THEME.pinkLight }}
-    >
-      <div className="mx-auto max-w-5xl">
-        <p
-          className="font-heading text-center text-sm font-semibold uppercase tracking-widest"
-          style={{ color: THEME.pink }}
-        >
-          অর্ডার ফর্ম
+    <section id={ORDER_FORM_ID} className="bg-white">
+      <div
+        className="section-banner text-center text-white"
+        style={{ backgroundColor: THEME.pink }}
+      >
+        <p className="text-xs font-medium uppercase tracking-wider text-white/90 md:text-sm">
+          সুরক্ষিত অর্ডার
         </p>
-        <h2
-          className="font-heading mt-1.5 text-center text-lg font-bold md:text-xl"
-          style={{ color: THEME.pink }}
-        >
-          অর্ডার করতে নিচের ফর্মটি পূরণ করুন
+        <h2 className="font-heading mt-0.5 text-base font-bold leading-snug md:text-lg">
+          অর্ডার করতে নিচের ফর্মটি পূরন করুন
         </h2>
-
-        <form
-          onSubmit={handleSubmit}
-          className="mt-6 overflow-hidden rounded-xl border-2 bg-white shadow-lg"
-          style={{ borderColor: THEME.pink }}
-        >
-          {/* Top accent bar */}
-          <div
-            className="h-1.5 w-full"
-            style={{ backgroundColor: THEME.pinkBright }}
-            aria-hidden
-          />
+      </div>
+      <div className="section-content py-10 md:py-14" style={{ backgroundColor: THEME.pinkLight }}>
+        <div className="mx-auto max-w-5xl">
+          <form
+            onSubmit={handleSubmit}
+            className="overflow-hidden rounded-2xl border-2 bg-white shadow-[var(--shadow-card)]"
+            style={{ borderColor: THEME.pink }}
+          >
+            {/* Top accent bar */}
+            <div
+              className="h-2 w-full"
+              style={{ backgroundColor: THEME.pinkBright }}
+              aria-hidden
+            />
 
           <div className="space-y-0">
             {/* Row 1: Your Products | Your order — side by side */}
-            <div className="grid grid-cols-1 gap-4 border-b border-gray-200 p-4 md:grid-cols-2 lg:p-5">
+            <div className="grid grid-cols-1 gap-6 border-b border-gray-200 p-5 md:grid-cols-2 lg:p-6">
               {/* Your Products */}
               <div>
                 <h3 className="font-heading text-sm font-bold text-gray-800">Your Products</h3>
-                <div className="mt-2 flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50/50 p-3">
+                <div className="mt-2 flex items-center gap-3 rounded-xl border border-gray-200 bg-gray-50/50 p-3 shadow-sm">
                   <input
                     type="checkbox"
                     defaultChecked
@@ -191,8 +186,7 @@ export default function OrderForm() {
                     id="name"
                     type="text"
                     required
-                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500/20"
-                    style={{ borderColor: "inherit" }}
+                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--pink-deep)]/20 focus:border-[var(--pink-deep)]"
                     placeholder="এখানে আপনার নাম লিখুন"
                   />
                 </div>
@@ -204,7 +198,7 @@ export default function OrderForm() {
                     id="phone"
                     type="tel"
                     required
-                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500/20"
+                    className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--pink-deep)]/20 focus:border-[var(--pink-deep)]"
                     placeholder="এখানে আপনার মোবাইল নাম্বার লিখুন"
                   />
                 </div>
@@ -216,7 +210,7 @@ export default function OrderForm() {
                     id="address"
                     required
                     rows={2}
-                    className="mt-1 w-full resize-none rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500/20"
+                    className="mt-1 w-full resize-none rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--pink-deep)]/20 focus:border-[var(--pink-deep)]"
                     placeholder="এলাকার নাম, থানা/উপজেলার নাম, জেলার নাম লিখুন.."
                   />
                 </div>
@@ -226,7 +220,7 @@ export default function OrderForm() {
               <div className="mt-5">
                 <h3 className="font-heading text-sm font-bold text-gray-800">Shipping</h3>
                 <div className="mt-2 space-y-1.5">
-                  <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-gray-200 p-2.5 text-sm hover:bg-gray-50">
+                  <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-gray-200 p-3 text-sm transition-colors hover:bg-gray-50 has-[:checked]:border-[var(--pink-deep)] has-[:checked]:bg-[var(--pink-light)]">
                     <input
                       type="radio"
                       name="shipping"
@@ -240,7 +234,7 @@ export default function OrderForm() {
                       {SHIPPING_OUTSIDE_DHAKA_BDT}.00৳
                     </span>
                   </label>
-                  <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-gray-200 p-2.5 text-sm hover:bg-gray-50">
+                  <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-gray-200 p-3 text-sm transition-colors hover:bg-gray-50 has-[:checked]:border-[var(--pink-deep)] has-[:checked]:bg-[var(--pink-light)]">
                     <input
                       type="radio"
                       name="shipping"
@@ -259,7 +253,7 @@ export default function OrderForm() {
             </div>
 
             {/* Right column: Payment + Button */}
-            <div className="flex flex-col bg-gray-50/50 p-4 lg:p-5">
+            <div className="flex flex-col bg-gray-50/60 p-5 lg:p-6">
               {/* Cash on delivery */}
               <div className="mt-2">
                 <h3 className="font-heading text-sm font-bold text-gray-800">
@@ -287,7 +281,7 @@ export default function OrderForm() {
               {/* Confirm button */}
               <button
                 type="submit"
-                className="font-heading mt-4 flex w-full items-center justify-center gap-2 rounded-lg py-3 text-sm font-semibold text-white shadow-md transition-all hover:opacity-95 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2"
+                className="font-heading mt-4 flex w-full items-center justify-center gap-2 rounded-xl py-3.5 text-sm font-semibold text-white shadow-[var(--shadow-button)] transition-all hover:opacity-95 hover:shadow-[var(--shadow-button-hover)] focus-visible:ring-2 focus-visible:ring-offset-2"
                 style={{ backgroundColor: THEME.pink }}
               >
                 <LockIcon className="h-4 w-4" />
@@ -297,6 +291,7 @@ export default function OrderForm() {
             </div>
           </div>
         </form>
+        </div>
       </div>
     </section>
   );

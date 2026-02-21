@@ -1,11 +1,8 @@
-import { THEME } from "./lib/constants";
 import {
   Hero,
-  VideoSection,
   Features,
-  Pricing,
-  FaqSection,
-  Reviews,
+  WhyBuy,
+  VideoSection,
   Contact,
   OrderForm,
   Footer,
@@ -13,13 +10,11 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-body text-white" style={{ backgroundColor: THEME.pink }}>
+    <div className="min-h-screen bg-white font-body text-gray-900 antialiased">
       <Hero />
-      <VideoSection />
       <Features />
-      <Pricing />
-      <FaqSection />
-      <Reviews />
+      <WhyBuy />
+      <VideoSection />
       <Contact />
       <OrderForm />
       <Footer />

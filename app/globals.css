@@ -7,6 +7,16 @@
   --pink-bright: #e60066;
   --pink-light: #fce8f0;
   --accent-yellow: #f5c542;
+  --section-alt: #f8f9fa;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 6px 20px rgba(184, 0, 77, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.06), 0 12px 28px rgba(184, 0, 77, 0.08);
+  --shadow-button: 0 2px 10px rgba(184, 0, 77, 0.28);
+  --shadow-button-hover: 0 6px 20px rgba(184, 0, 77, 0.38);
 }
 
 @theme inline {
@@ -27,7 +37,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography: titles use Noto Serif Bengali for better Bangla style */
 .font-heading {
   font-family: var(--font-heading-bengali), "Noto Serif Bengali", var(--font-bengali), ui-serif, serif;
 }
@@ -36,13 +45,37 @@ body {
   font-family: var(--font-bengali), "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Focus styles for accessibility */
 :focus-visible {
   outline: 2px solid var(--pink-bright);
   outline-offset: 2px;
 }
 
-/* Selection */
 ::selection {
-  background: rgba(230, 0, 102, 0.2);
+  background: rgba(184, 0, 77, 0.15);
+}
+
+/* Section banner – consistent red headers */
+.section-banner {
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 768px) {
+  .section-banner {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+/* Content container – consistent max-width and horizontal padding */
+.section-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .section-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

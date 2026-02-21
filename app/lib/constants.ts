@@ -16,10 +16,11 @@ export const ORDER_FORM_ID = "order";
 
 export const CTA_LABEL = "অর্ডার করতে চাই";
 
-export const CONTACT_PHONE = "01xxxxxxxxx";
+export const CONTACT_PHONE = "01819000000";
 
-/** Order form: product & shipping */
-export const ORDER_PRODUCT_NAME = "সাফরন গোট মিল্ক সোপ";
-export const ORDER_UNIT_PRICE_BDT = 490;
+/** Order form: product & shipping (Beetroot Powder) */
+export const ORDER_PRODUCT_NAME = "বিটরুট পাউডার";
+export const ORDER_UNIT_PRICE_BDT = 900;
+export const REGULAR_PRICE_BDT = 1100;
 export const SHIPPING_INSIDE_DHAKA_BDT = 60;
 export const SHIPPING_OUTSIDE_DHAKA_BDT = 90;
