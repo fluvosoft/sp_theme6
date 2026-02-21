@@ -1,5 +1,4 @@
 import { THEME } from "../../lib/constants";
-import { HeartIcon } from "../ui/Icons";
 
 export default function Footer() {
   return (
@@ -9,7 +8,7 @@ export default function Footer() {
     >
       <div className="section-content">
         <p className="font-body text-sm text-white/95 md:text-base">
-          Copyright © 2025 | Made with <HeartIcon className="inline h-4 w-4 text-red-200" /> by HIMEL
+          Copyright © 2025 | Made by Fluvosoft
         </p>
         <p className="mt-1 text-xs text-white/70">
           বিটরুট পাউডার — ল্যাব টেস্টেড, সরকার অনুমোদিত

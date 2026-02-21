@@ -40,19 +40,25 @@ export default function OrderForm() {
   }
 
   return (
-    <section id={ORDER_FORM_ID} className="bg-white">
-      <div
-        className="section-banner text-center text-white"
-        style={{ backgroundColor: THEME.pink }}
-      >
-        <p className="text-xs font-medium uppercase tracking-wider text-white/90 md:text-sm">
-          সুরক্ষিত অর্ডার
-        </p>
-        <h2 className="font-heading mt-0.5 text-base font-bold leading-snug md:text-lg">
-          অর্ডার করতে নিচের ফর্মটি পূরন করুন
-        </h2>
+    <section id={ORDER_FORM_ID} className="bg-[var(--section-alt)]">
+      <div className="section-content flex flex-col items-center justify-center gap-3 py-8 md:flex-row md:gap-6 md:py-10">
+        <div
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-white"
+          style={{ backgroundColor: THEME.pink }}
+          aria-hidden
+        >
+          <LockIcon className="h-6 w-6" />
+        </div>
+        <div className="text-center md:text-left">
+          <p className="text-xs font-semibold uppercase tracking-wider md:text-sm" style={{ color: THEME.pink }}>
+            সুরক্ষিত অর্ডার
+          </p>
+          <h2 className="font-heading mt-0.5 text-lg font-bold text-gray-900 md:text-xl">
+            অর্ডার করতে নিচের ফর্মটি পূরন করুন
+          </h2>
+        </div>
       </div>
-      <div className="section-content py-10 md:py-14" style={{ backgroundColor: THEME.pinkLight }}>
+      <div className="section-content bg-[var(--section-alt)] py-10 md:py-14">
         <div className="mx-auto max-w-5xl">
           <form
             onSubmit={handleSubmit}
@@ -219,32 +225,32 @@ export default function OrderForm() {
               {/* Shipping */}
               <div className="mt-5">
                 <h3 className="font-heading text-sm font-bold text-gray-800">Shipping</h3>
-                <div className="mt-2 space-y-1.5">
-                  <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-gray-200 p-3 text-sm transition-colors hover:bg-gray-50 has-[:checked]:border-[var(--pink-deep)] has-[:checked]:bg-[var(--pink-light)]">
+                <div className="mt-2 flex flex-wrap gap-2 sm:flex-nowrap">
+                  <label className="flex min-w-0 cursor-pointer flex-1 items-center gap-3 rounded-xl border border-gray-200 p-3 text-sm transition-colors hover:bg-gray-50 has-[:checked]:border-[var(--pink-deep)] has-[:checked]:bg-[var(--pink-light)]">
                     <input
                       type="radio"
                       name="shipping"
                       checked={shipping === "outside"}
                       onChange={() => setShipping("outside")}
-                      className="h-4 w-4"
+                      className="h-4 w-4 shrink-0"
                       style={{ accentColor: THEME.pink }}
                     />
-                    <span className="text-gray-800">ঢাকার বাহিরে:</span>
-                    <span className="font-semibold text-gray-900">
+                    <span className="min-w-0 text-gray-800">ঢাকার বাহিরে:</span>
+                    <span className="shrink-0 font-semibold text-gray-900">
                       {SHIPPING_OUTSIDE_DHAKA_BDT}.00৳
                     </span>
                   </label>
-                  <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-gray-200 p-3 text-sm transition-colors hover:bg-gray-50 has-[:checked]:border-[var(--pink-deep)] has-[:checked]:bg-[var(--pink-light)]">
+                  <label className="flex min-w-0 cursor-pointer flex-1 items-center gap-3 rounded-xl border border-gray-200 p-3 text-sm transition-colors hover:bg-gray-50 has-[:checked]:border-[var(--pink-deep)] has-[:checked]:bg-[var(--pink-light)]">
                     <input
                       type="radio"
                       name="shipping"
                       checked={shipping === "inside"}
                       onChange={() => setShipping("inside")}
-                      className="h-4 w-4"
+                      className="h-4 w-4 shrink-0"
                       style={{ accentColor: THEME.pink }}
                     />
-                    <span className="text-gray-800">ঢাকার ভিতরে:</span>
-                    <span className="font-semibold text-gray-900">
+                    <span className="min-w-0 text-gray-800">ঢাকার ভিতরে:</span>
+                    <span className="shrink-0 font-semibold text-gray-900">
                       {SHIPPING_INSIDE_DHAKA_BDT}.00৳
                     </span>
                   </label>

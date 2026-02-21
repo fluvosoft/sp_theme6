@@ -30,7 +30,7 @@ export default function Features() {
           </p>
         </div>
 
-        <ul className="mx-auto mt-8 max-w-2xl space-y-4">
+        <ul className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-4 md:grid-cols-2">
           {BENEFITS.map((text, i) => (
             <li
               key={i}
