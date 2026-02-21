@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Bengali, Plus_Jakarta_Sans } from "next/font/google";
+import { Noto_Sans_Bengali, Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 
 const notoSansBengali = Noto_Sans_Bengali({
@@ -9,10 +9,10 @@ const notoSansBengali = Noto_Sans_Bengali({
   display: "swap",
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-heading",
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+const notoSerifBengali = Noto_Serif_Bengali({
+  variable: "--font-heading-bengali",
+  subsets: ["bengali", "latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bn" className={`${notoSansBengali.variable} ${plusJakartaSans.variable}`}>
+    <html lang="bn" className={`${notoSansBengali.variable} ${notoSerifBengali.variable}`}>
       <body className="font-body antialiased">
         {children}
       </body>

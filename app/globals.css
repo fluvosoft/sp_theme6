@@ -27,9 +27,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography: --font-heading & --font-bengali are injected by next/font */
+/* Typography: titles use Noto Serif Bengali for better Bangla style */
 .font-heading {
-  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-heading-bengali), "Noto Serif Bengali", var(--font-bengali), ui-serif, serif;
 }
 
 .font-body {
